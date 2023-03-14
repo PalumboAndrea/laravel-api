@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container my-4">
+    @include('layouts.includes.confirmMessage')
     <h2 class="m-3 p-2 fw-bold text-center">
         Posts in {{  $type->name }} type
     </h2>

@@ -7,9 +7,7 @@
 @section('content')
 
 <div class="container mt-4 admin-index text-center">
-
     @include('layouts.includes.confirmMessage')
-
     <table class="table table-hover">
         <thead>
             <tr>

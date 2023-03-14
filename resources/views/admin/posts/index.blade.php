@@ -27,9 +27,8 @@
             @foreach ($posts as $post)
             <tr>
                 <th scope="row" class="align-middle">{{ $post->id }}</th>
-                
                 <td class="align-middle text-nowrap">
-                    <span style="color: {{ $post->type->color }}">{{ ucfirst(trans($post->type->name)) ?? 'No type' }}</span>
+                    <span style="color: <?php echo !empty($post->type->color) ? $post->type->color : 'black'?>">{{ !empty($post->type->color) ? ucfirst(trans($post->type->name)) : 'No type' }}</span>
                 </td>
                 <td class="align-middle">{{ $post->title }}</td>
                 <td class="align-middle">{{ $post->author }}</td>
