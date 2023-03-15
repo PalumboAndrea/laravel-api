@@ -7,6 +7,7 @@ use Illuminate\Database\Seeder;
 use Faker\Generator as Faker;
 use App\Models\Post;
 use App\Models\Type;
+use App\Models\User; 
 use Illuminate\Support\Str;
 
 class PostSeeder extends Seeder
@@ -17,14 +18,14 @@ class PostSeeder extends Seeder
      * @return void
      */
     public function run(Faker $faker){
-        $types = Type::all();
 
         for ($i=0; $i<50; $i++){
             $newPost = new Post();
+            $newPost->user_id = User::inRandomOrder()->first()->id;
             $newPost->type_id = Type::inRandomOrder()->first()->id;
             $newPost->title = $faker->unique()->realTextBetween(5, 20);
             $newPost->slug = Str::slug($newPost->title);
-            $newPost->author = $faker->name();
+            // $newPost->author = $faker->name();
             $newPost->content = $faker->realTextBetween(200, 400);
             $newPost->post_date = $faker->dateTimeThisDecade();
             $newPost->image_path = $faker->imageUrl(640, 480, 'animals', true);

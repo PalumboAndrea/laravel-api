@@ -8,10 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
-    protected $fillable = array('type_id', 'slug', 'title', 'author', 'content', 'post_date', 'image_path');
+    protected $fillable = array('user_id', 'type_id', 'slug', 'title', 'author', 'content', 'post_date', 'image_path');
 
     public function type(){
         return $this->belongsTo(Type::class);
+    }
+
+    public function user(){
+        return $this->belongsTo(User::class);
     }
 
     public function isImageAUrl(){

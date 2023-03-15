@@ -3,7 +3,7 @@
         @csrf
         @method($method)
         <h5 class="mb-3">
-        Author: <span class="fw-semibold">{{ Auth::user()->name }} </span>
+        Author: <span class="fw-semibold">{{ $post->user->name ?? Auth::user()->name }} </span>
         </h5>
 
         <div class="mb-3">

@@ -12,6 +12,7 @@ return array(
     'App\\Http\\Controllers\\Admin\\PostController' => $baseDir . '/app/Http/Controllers/Admin/PostController.php',
     'App\\Http\\Controllers\\Admin\\TechnologyController' => $baseDir . '/app/Http/Controllers/Admin/TechnologyController.php',
     'App\\Http\\Controllers\\Admin\\TypeController' => $baseDir . '/app/Http/Controllers/Admin/TypeController.php',
+    'App\\Http\\Controllers\\Api\\PostController' => $baseDir . '/app/Http/Controllers/Api/PostController.php',
     'App\\Http\\Controllers\\Auth\\AuthenticatedSessionController' => $baseDir . '/app/Http/Controllers/Auth/AuthenticatedSessionController.php',
     'App\\Http\\Controllers\\Auth\\ConfirmablePasswordController' => $baseDir . '/app/Http/Controllers/Auth/ConfirmablePasswordController.php',
     'App\\Http\\Controllers\\Auth\\EmailVerificationNotificationController' => $baseDir . '/app/Http/Controllers/Auth/EmailVerificationNotificationController.php',

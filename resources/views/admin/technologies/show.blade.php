@@ -9,7 +9,7 @@
     @foreach ($technology->posts as $post)
     <div class="card text-center my-4">
         <div class="card-header">
-            {{ $post->author }}
+            {{ $post->user->name }}
         </div>
         <div class="card-body p-3 m-3">
             <h2 class="card-title fw-bold p-3">

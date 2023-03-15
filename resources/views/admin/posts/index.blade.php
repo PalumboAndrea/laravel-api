@@ -31,7 +31,7 @@
                     <span style="color: <?php echo !empty($post->type->color) ? $post->type->color : 'black'?>">{{ !empty($post->type->color) ? ucfirst(trans($post->type->name)) : 'No type' }}</span>
                 </td>
                 <td class="align-middle">{{ $post->title }}</td>
-                <td class="align-middle">{{ $post->author }}</td>
+                <td class="align-middle">{{ $post->user->name }}</td>
                 <td class="align-middle overflow-scroll">{{ $post->content }}</td>
                 <td class="align-middle">
                     @forelse ($post->technologies as $tech)

@@ -54,7 +54,7 @@ class PostController extends Controller
     {
         // to validate the datas
         $data = $request->validate($this->validationRules);
-        $data['author'] = Auth::user()->name;
+        $data['user_id'] = Auth::user()->id;
         $data['slug'] = Str::slug($data['title']);
         $data['image_path'] = Storage::put('uploads', $data['image_path']); // dico al campo del DB di salvare la foto inserita dall'utente
         $newPost = new Post();
